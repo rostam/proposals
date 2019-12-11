@@ -1,2 +1,2 @@
-# proposals
-My Proposals
+# Proposals
+- Location-based game learning
