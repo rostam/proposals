@@ -1,17 +1,12 @@
-name: CI
-
+name: Build LaTeX document
 on: [push]
-
 jobs:
-  build:
-
+  build_latex:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: LocationBasedGameLearning/proposal.tex
